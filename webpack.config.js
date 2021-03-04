@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, './dist/'),
+    path: path.resolve(__dirname, './build/'),
   },
   module: {
     rules: [
@@ -26,11 +26,6 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            // options: {
-            //   modules: {
-            //     localIdentName: '[path][local]___[hash:base64:5]',
-            //   },
-            // },
           },
           {
             loader: 'sass-loader',
@@ -41,6 +36,6 @@ module.exports = {
   },
   plugins: [new MiniCssExtractPlugin({ filename: 'index.css' })],
   devServer: {
-    contentBase: './dist',
+    contentBase: './build',
   },
 };

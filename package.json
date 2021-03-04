@@ -1,11 +1,14 @@
 {
   "name": "dcard-intern-project",
   "version": "1.0.0",
+  "homepage": "https://brook110413.github.io/dcard-intern-project",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack -p",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +28,7 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "esnpm": "^1.0.6",
+    "gh-pages": "^3.1.0",
     "i": "^0.3.6",
     "mini-css-extract-plugin": "^1.3.6",
     "node-sass": "^5.0.0",
