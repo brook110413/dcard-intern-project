@@ -1,5 +1,4 @@
-import React, { Fragment, memo } from 'react';
-import PropTypes from 'prop-types';
+import React, { memo } from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';

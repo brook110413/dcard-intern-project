@@ -7,7 +7,6 @@ export const SET_CITY = 'SET_CITY';
 
 export const fetchScenicSpotList = (top) => (dispatch) => {
   axios(`${url}/v2/Tourism/ScenicSpot?$top=${top}`).then((res) => {
-    console.log(res.data);
     dispatch({
       type: FETCH_SCENIC_SPOT_LIST,
       payload: res.data,
@@ -17,7 +16,6 @@ export const fetchScenicSpotList = (top) => (dispatch) => {
 
 export const fetchCityOfScenicSpotList = (city, top) => (dispatch) => {
   axios(`${url}/v2/Tourism/ScenicSpot/${city}?$top=${top}`).then((res) => {
-    console.log(res.data);
     dispatch({
       type: FETCH_CITY_OF_SCENIC_SPOT_LIST,
       payload: res.data,
